@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/template",
+  "author": "David Sanromá",
+  "classifications": [ "Code", "Common" ],
+  "identity": "motsoft.solution.multiproject",
+  "name": "Motsoft Solution Multiproject",
+  "shortName": "mot-sol",
+  "tags": {
+    "language": "F#",
+    "type": "solution"
+  },
+  "sourceName": "MotsoftSolution",
+  "sources": [
+    {
+      "exclude": [
+        ".git/**",
+        ".template.config/**",
+        "**/bin/**",
+        "**/obj/**"
+      ]
+    }
+  ]
+}

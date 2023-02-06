@@ -1,0 +1,28 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MotsoftSolution", "src\MotsoftSolution\MotsoftSolution.fsproj", "{0F903083-4B1C-4DD3-84A8-009D491632C4}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Infrastructure", "src\Infrastructure\Infrastructure.fsproj", "{B3D0A00F-FD19-4959-BCF4-6F9F4A5F2A9F}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Model", "src\Model\Model.fsproj", "{42EBBEB9-EF0D-4A9F-BE07-B2DCD5AC776A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F903083-4B1C-4DD3-84A8-009D491632C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F903083-4B1C-4DD3-84A8-009D491632C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F903083-4B1C-4DD3-84A8-009D491632C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F903083-4B1C-4DD3-84A8-009D491632C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3D0A00F-FD19-4959-BCF4-6F9F4A5F2A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D0A00F-FD19-4959-BCF4-6F9F4A5F2A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D0A00F-FD19-4959-BCF4-6F9F4A5F2A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D0A00F-FD19-4959-BCF4-6F9F4A5F2A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42EBBEB9-EF0D-4A9F-BE07-B2DCD5AC776A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42EBBEB9-EF0D-4A9F-BE07-B2DCD5AC776A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42EBBEB9-EF0D-4A9F-BE07-B2DCD5AC776A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42EBBEB9-EF0D-4A9F-BE07-B2DCD5AC776A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
