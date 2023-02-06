@@ -7,14 +7,23 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="CommandLineParser.FSharp" Version="2.9.1" />
       <PackageReference Include="Npgsql.FSharp" Version="5.6.0" />
     </ItemGroup>
 
     <ItemGroup>
       <Compile Include="Brokers\Database\Sql.fs" />
       <Compile Include="Brokers\Database\SqlDI.fs" />
+      <Compile Include="Brokers\Help\HelpText.fs" />
+      <Compile Include="Brokers\Help\HelpDI.fs" />
+      <Compile Include="Brokers\Exceptions\Exception.fs" />
+      <Compile Include="Brokers\Exceptions\ExceptionsDI.fs" />
       <Compile Include="Services\Database\OdooChecks.fs" />
       <Compile Include="Services\Database\DatabaseDI.fs" />
+      <Compile Include="Services\Help\HelpText.fs" />
+      <Compile Include="Services\Help\HelpDI.fs" />
+      <Compile Include="Services\Exceptions\Exception.fs" />
+      <Compile Include="Services\Exceptions\ExceptionsDI.fs" />
     </ItemGroup>
 
     <ItemGroup>

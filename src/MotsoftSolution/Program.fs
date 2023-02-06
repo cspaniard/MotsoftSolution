@@ -1,8 +1,12 @@
 open System
+open System.ComponentModel.DataAnnotations
 open CommandLine
-open CommandLine.Text
 open Model
 open Model.Definitions
+open Model.Constants
+
+type private IHelpService = DI.Services.HelpDI.IHelpService
+type private IExceptionService = DI.Services.ExceptionsDI.IExceptionService
 
 //----------------------------------------------------------------------------------------------------------------------
 try
@@ -11,15 +15,19 @@ try
 
     match parser.ParseArguments<ArgumentOptions> args with
     | Parsed as opts ->
-            // Lanzar la aplicación
-            // appStart opts.Value
-            // |> exit
-            exit 0
+             // appInit opts.Value
+             // appStart opts.Value
+             // |> exit
+             exit 0
     | NotParsed as notParsed ->
-            HelpText.AutoBuild<ArgumentOptions> notParsed
-            |> Console.Error.WriteLine
-            exit 1
+             notParsed.Errors
+             |> ArgErrors
+             |> IHelpService.showHelp
+             |> exit
 
-with e ->
-    Console.WriteLine e.Message
+with
+| :? AggregateException as ae -> IHelpService.showHelp <| ExceptionErrors ae.InnerExceptions |> exit
+| :? ValidationException as ve -> IHelpService.showHelp <| ValidationError ve |> exit
+| e -> IExceptionService.outputException e
+       exit EXIT_CODE_EXCEPTION
 //----------------------------------------------------------------------------------------------------------------------
